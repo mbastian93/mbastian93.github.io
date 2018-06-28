@@ -577,7 +577,6 @@ var NewsFeedService = /** @class */ (function () {
         this.feedSources.forEach(function (source) {
             _this.getNewsFromFeed(source.url).toPromise()
                 .then(function (response) {
-                alert('fetched feed ' + response.substr(0, 10));
                 _this.parseFeedFromXmlToJson(response, source.name);
             });
         });
