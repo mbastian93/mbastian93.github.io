@@ -1,7 +1,7 @@
 {
   "name": "Studierendenportal",
   "short_name": "Studierendenportal",
-  "theme_color": "#1976d2",
+  "theme_color": "##71c1c",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",

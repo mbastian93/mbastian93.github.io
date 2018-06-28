@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _news_feed_news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./news-feed/news-feed/news-feed.component */ "./src/app/news-feed/news-feed/news-feed.component.ts");
+/* harmony import */ var _news_feed_news_feed_component_news_feed_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./news-feed/news-feed-component/news-feed.component */ "./src/app/news-feed/news-feed-component/news-feed.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -48,7 +48,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 // define the routes
 var routes = [
     { path: '', redirectTo: 'Nachrichten', pathMatch: 'full' },
-    { path: 'Nachrichten', component: _news_feed_news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_2__["NewsFeedComponent"] }
+    { path: 'Nachrichten', component: _news_feed_news_feed_component_news_feed_component__WEBPACK_IMPORTED_MODULE_2__["NewsFeedComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -333,6 +333,149 @@ var FeedPost = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/news-feed/news-feed-component/news-feed-sheet.component.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/news-feed/news-feed-component/news-feed-sheet.component.ts ***!
+  \****************************************************************************/
+/*! exports provided: NewsFeedSheetComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsFeedSheetComponent", function() { return NewsFeedSheetComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var NewsFeedSheetComponent = /** @class */ (function () {
+    function NewsFeedSheetComponent(data, bottomSheetRef) {
+        this.data = data;
+        this.bottomSheetRef = bottomSheetRef;
+    }
+    NewsFeedSheetComponent.prototype.ngOnInit = function () { };
+    NewsFeedSheetComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-news-feed',
+            template: '<mat-nav-list>\n' +
+                '  <a href="{{ data.item.link }}" mat-list-item>\n' +
+                '    <span mat-line>Seite öffnen</span>\n' +
+                '  </a>\n' +
+                '</mat-nav-list>',
+        }),
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_1__["MAT_BOTTOM_SHEET_DATA"])),
+        __metadata("design:paramtypes", [Object, _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatBottomSheetRef"]])
+    ], NewsFeedSheetComponent);
+    return NewsFeedSheetComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/news-feed/news-feed-component/news-feed.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/news-feed/news-feed-component/news-feed.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"content-container\">\n  <mat-form-field>\n    <!-- list available sources -->\n    <mat-select name=\"sourceSelector\" id=\"sourceSelector\" placeholder=\"Quelle auswählen:\"\n                (selectionChange)=\"selectHandler($event)\">\n      <mat-option *ngFor=\"let feed of this.feeds\" [value]=\"feed\">\n        {{ feed.feedName }}\n      </mat-option>\n    </mat-select>\n  </mat-form-field>\n  <div class=\"output\" *ngIf=\"activeSource\">\n    <mat-card *ngFor=\"let item of activeSource.items\" (click)=\"openLinkForItem(item)\" class=\"mat-elevation-z3\">\n      <mat-card-header>\n        <mat-card-title>\n          <h3>{{ item.title }}</h3>\n        </mat-card-title>\n        <mat-card-subtitle>{{item.pubDate | date: 'dd.MM.yyyy' }}</mat-card-subtitle>\n      </mat-card-header>\n      <mat-card-content [innerHtml]=\"item.description\"></mat-card-content>\n      <mat-chip-list *ngIf=\"item.categories.length > 0\">\n        <mat-chip class=\"grey\" *ngFor=\"let cat of item.categories\">\n          {{ cat }}\n        </mat-chip>\n      </mat-chip-list>\n    </mat-card>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/news-feed/news-feed-component/news-feed.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/news-feed/news-feed-component/news-feed.component.scss ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-form-field {\n  margin-top: 15px; }\n\nmat-card {\n  width: 300px;\n  margin: 10px;\n  padding: 24px;\n  -ms-hyphens: auto;\n  -webkit-hyphens: auto;\n  hyphens: auto; }\n\nmat-card mat-card-header {\n    display: block; }\n\nmat-card mat-card-content {\n    padding-bottom: 5px; }\n\nmat-card:hover {\n  box-shadow: 0 8px 9px -5px rgba(0, 0, 0, 0.2), 0 15px 22px 2px rgba(0, 0, 0, 0.14), 0 6px 28px 5px rgba(0, 0, 0, 0.12);\n  cursor: pointer; }\n\nmat-card:hover mat-card-content {\n    max-height: 100%; }\n\nmat-chip-list {\n  position: absolute;\n  bottom: 5px;\n  left: 5px; }\n\n/*\r\nNot working properly...\r\nmat-card-content {\r\n  max-height: 200px;\r\n  overflow: hidden;\r\n  transition: max-height 280ms cubic-bezier(.4,0,.2,1);\r\n}\r\n*/\n\n.output {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center; }\n"
+
+/***/ }),
+
+/***/ "./src/app/news-feed/news-feed-component/news-feed.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/news-feed/news-feed-component/news-feed.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: NewsFeedComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsFeedComponent", function() { return NewsFeedComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _news_feed_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../news-feed.service */ "./src/app/news-feed/news-feed.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./news-feed-sheet.component */ "./src/app/news-feed/news-feed-component/news-feed-sheet.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NewsFeedComponent = /** @class */ (function () {
+    function NewsFeedComponent(feedService, bottomSheet) {
+        this.feedService = feedService;
+        this.bottomSheet = bottomSheet;
+    }
+    NewsFeedComponent.prototype.ngOnInit = function () {
+        this.getFeeds();
+    };
+    NewsFeedComponent.prototype.getFeeds = function () {
+        this.feedService.getNews();
+        this.feeds = this.feedService.feedsAsJSON;
+        this.activeSource = this.feedService.defaultFeed;
+    };
+    // switch source for feed when selected
+    NewsFeedComponent.prototype.selectHandler = function (event) {
+        this.activeSource = event.value;
+    };
+    // open link directly only on devices without touch
+    NewsFeedComponent.prototype.openLinkForItem = function (item) {
+        if (window.ontouchstart === undefined) {
+            window.open(item.link);
+        }
+        else {
+            this.bottomSheet.open(_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_3__["NewsFeedSheetComponent"], { data: { item: item } });
+        }
+    };
+    NewsFeedComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-news-feed',
+            template: __webpack_require__(/*! ./news-feed.component.html */ "./src/app/news-feed/news-feed-component/news-feed.component.html"),
+            styles: [__webpack_require__(/*! ./news-feed.component.scss */ "./src/app/news-feed/news-feed-component/news-feed.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_news_feed_service__WEBPACK_IMPORTED_MODULE_1__["NewsFeedService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatBottomSheet"]])
+    ], NewsFeedComponent);
+    return NewsFeedComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/news-feed/news-feed.module.ts":
 /*!***********************************************!*\
   !*** ./src/app/news-feed/news-feed.module.ts ***!
@@ -345,9 +488,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsFeedModule", function() { return NewsFeedModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./news-feed/news-feed.component */ "./src/app/news-feed/news-feed/news-feed.component.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _news_feed_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./news-feed/news-feed-sheet.component */ "./src/app/news-feed/news-feed/news-feed-sheet.component.ts");
+/* harmony import */ var _news_feed_component_news_feed_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./news-feed-component/news-feed.component */ "./src/app/news-feed/news-feed-component/news-feed.component.ts");
+/* harmony import */ var _news_feed_component_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./news-feed-component/news-feed-sheet.component */ "./src/app/news-feed/news-feed-component/news-feed-sheet.component.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -366,15 +509,15 @@ var NewsFeedModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSelectModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatChipsModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatListModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatBottomSheetModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSelectModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatChipsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatBottomSheetModule"]
             ],
-            declarations: [_news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_2__["NewsFeedComponent"], _news_feed_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_4__["NewsFeedSheetComponent"]],
-            bootstrap: [_news_feed_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_4__["NewsFeedSheetComponent"]]
+            declarations: [_news_feed_component_news_feed_component__WEBPACK_IMPORTED_MODULE_2__["NewsFeedComponent"], _news_feed_component_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_3__["NewsFeedSheetComponent"]],
+            bootstrap: [_news_feed_component_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_3__["NewsFeedSheetComponent"]]
         })
     ], NewsFeedModule);
     return NewsFeedModule;
@@ -434,6 +577,7 @@ var NewsFeedService = /** @class */ (function () {
         this.feedSources.forEach(function (source) {
             _this.getNewsFromFeed(source.url).toPromise()
                 .then(function (response) {
+                alert('fetched feed ' + response.substr(0, 10));
                 _this.parseFeedFromXmlToJson(response, source.name);
             });
         });
@@ -503,149 +647,6 @@ var NewsFeedService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], NewsFeedService);
     return NewsFeedService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/news-feed/news-feed/news-feed-sheet.component.ts":
-/*!******************************************************************!*\
-  !*** ./src/app/news-feed/news-feed/news-feed-sheet.component.ts ***!
-  \******************************************************************/
-/*! exports provided: NewsFeedSheetComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsFeedSheetComponent", function() { return NewsFeedSheetComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-var NewsFeedSheetComponent = /** @class */ (function () {
-    function NewsFeedSheetComponent(data, bottomSheetRef) {
-        this.data = data;
-        this.bottomSheetRef = bottomSheetRef;
-    }
-    NewsFeedSheetComponent.prototype.ngOnInit = function () { };
-    NewsFeedSheetComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-news-feed',
-            template: '<mat-nav-list>\n' +
-                '  <a href="{{ data.item.link }}" mat-list-item>\n' +
-                '    <span mat-line>Seite öffnen</span>\n' +
-                '  </a>\n' +
-                '</mat-nav-list>',
-        }),
-        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_1__["MAT_BOTTOM_SHEET_DATA"])),
-        __metadata("design:paramtypes", [Object, _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatBottomSheetRef"]])
-    ], NewsFeedSheetComponent);
-    return NewsFeedSheetComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/news-feed/news-feed/news-feed.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/news-feed/news-feed/news-feed.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"content-container\">\n  <mat-form-field>\n    <!-- list available sources -->\n    <mat-select name=\"sourceSelector\" id=\"sourceSelector\" placeholder=\"Quelle auswählen:\"\n                (selectionChange)=\"selectHandler($event)\">\n      <mat-option *ngFor=\"let feed of this.feeds\" [value]=\"feed\">\n        {{ feed.feedName }}\n      </mat-option>\n    </mat-select>\n  </mat-form-field>\n  <div class=\"output\" *ngIf=\"activeSource\">\n    <mat-card *ngFor=\"let item of activeSource.items\" (click)=\"openLinkForItem(item)\" class=\"mat-elevation-z3\">\n      <mat-card-header>\n        <mat-card-title>\n          <h3>{{ item.title }}</h3>\n        </mat-card-title>\n        <mat-card-subtitle>{{item.pubDate | date: 'dd.MM.yyyy' }}</mat-card-subtitle>\n      </mat-card-header>\n      <mat-card-content [innerHtml]=\"item.description\"></mat-card-content>\n      <mat-chip-list *ngIf=\"item.categories.length > 0\">\n        <mat-chip class=\"grey\" *ngFor=\"let cat of item.categories\">\n          {{ cat }}\n        </mat-chip>\n      </mat-chip-list>\n    </mat-card>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/news-feed/news-feed/news-feed.component.scss":
-/*!**************************************************************!*\
-  !*** ./src/app/news-feed/news-feed/news-feed.component.scss ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "mat-form-field {\n  margin-top: 15px; }\n\nmat-card {\n  width: 300px;\n  margin: 10px;\n  padding: 24px;\n  -ms-hyphens: auto;\n  -webkit-hyphens: auto;\n  hyphens: auto; }\n\nmat-card mat-card-header {\n    display: block; }\n\nmat-card mat-card-content {\n    padding-bottom: 5px; }\n\nmat-card:hover {\n  box-shadow: 0 8px 9px -5px rgba(0, 0, 0, 0.2), 0 15px 22px 2px rgba(0, 0, 0, 0.14), 0 6px 28px 5px rgba(0, 0, 0, 0.12);\n  cursor: pointer; }\n\nmat-card:hover mat-card-content {\n    max-height: 100%; }\n\nmat-chip-list {\n  position: absolute;\n  bottom: 5px;\n  left: 5px; }\n\n/*\r\nNot working properly...\r\nmat-card-content {\r\n  max-height: 200px;\r\n  overflow: hidden;\r\n  transition: max-height 280ms cubic-bezier(.4,0,.2,1);\r\n}\r\n*/\n\n.output {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center; }\n"
-
-/***/ }),
-
-/***/ "./src/app/news-feed/news-feed/news-feed.component.ts":
-/*!************************************************************!*\
-  !*** ./src/app/news-feed/news-feed/news-feed.component.ts ***!
-  \************************************************************/
-/*! exports provided: NewsFeedComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsFeedComponent", function() { return NewsFeedComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _news_feed_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../news-feed.service */ "./src/app/news-feed/news-feed.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./news-feed-sheet.component */ "./src/app/news-feed/news-feed/news-feed-sheet.component.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var NewsFeedComponent = /** @class */ (function () {
-    function NewsFeedComponent(feedService, bottomSheet) {
-        this.feedService = feedService;
-        this.bottomSheet = bottomSheet;
-    }
-    NewsFeedComponent.prototype.ngOnInit = function () {
-        this.getFeeds();
-    };
-    NewsFeedComponent.prototype.getFeeds = function () {
-        this.feedService.getNews();
-        this.feeds = this.feedService.feedsAsJSON;
-        this.activeSource = this.feedService.defaultFeed;
-    };
-    // switch source for feed when selected
-    NewsFeedComponent.prototype.selectHandler = function (event) {
-        this.activeSource = event.value;
-    };
-    // open link directly only on devices without touch
-    NewsFeedComponent.prototype.openLinkForItem = function (item) {
-        if (window.ontouchstart === undefined) {
-            window.open(item.link);
-        }
-        else {
-            this.bottomSheet.open(_news_feed_sheet_component__WEBPACK_IMPORTED_MODULE_3__["NewsFeedSheetComponent"], { data: { item: item } });
-        }
-    };
-    NewsFeedComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-news-feed',
-            template: __webpack_require__(/*! ./news-feed.component.html */ "./src/app/news-feed/news-feed/news-feed.component.html"),
-            styles: [__webpack_require__(/*! ./news-feed.component.scss */ "./src/app/news-feed/news-feed/news-feed.component.scss")]
-        }),
-        __metadata("design:paramtypes", [_news_feed_service__WEBPACK_IMPORTED_MODULE_1__["NewsFeedService"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatBottomSheet"]])
-    ], NewsFeedComponent);
-    return NewsFeedComponent;
 }());
 
 
