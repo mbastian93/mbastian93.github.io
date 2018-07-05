@@ -43,7 +43,8 @@
       "name": "uni-mainz.de",
       "patterns": [
         "https:\\/\\/www\\.uni-mainz\\.de\\/32\\.php",
-        "https:\\/\\/www\\.zdv\\.uni-mainz\\.de\\/feed\\/"
+        "https:\\/\\/www\\.zdv\\.uni-mainz\\.de\\/feed\\/",
+        "https:\\/\\/raeume\\.uni-mainz\\.de\\/aris-api\\/Building"
       ],
       "strategy": "performance",
       "maxSize": 300,
@@ -64,7 +65,7 @@
     "/assets/icons/map-marker.png": "8887c2171d97e9d47bc797bdef0644b704ec26a4",
     "/assets/icons/newspaper.svg": "3d96edeb81389dfac9dd22a0136cb21631e74105",
     "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "e7e27d52612a0eafe92a892a83d6703f966f8dcb",
+    "/index.html": "e6b30ad5dd2c883aea79129c670273b5443c6a12",
     "/main.9951ac449b8c9ca829fc.js": "f641315cf81e31f5a5b589e484969293a7c68b0c",
     "/polyfills.e3633a42d1123afc5fc9.js": "5261a4729f780dd900641be94bd321182959641a",
     "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
