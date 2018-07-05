@@ -9,7 +9,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.e61a17fab3f87e2a731d.js",
+        "/main.9951ac449b8c9ca829fc.js",
         "/polyfills.e3633a42d1123afc5fc9.js",
         "/runtime.a66f828dca56eeb90e02.js",
         "/styles.9d95ade21975986aadcb.css"
@@ -50,8 +50,8 @@
     "/assets/icons/map-marker.png": "8887c2171d97e9d47bc797bdef0644b704ec26a4",
     "/assets/icons/newspaper.svg": "3d96edeb81389dfac9dd22a0136cb21631e74105",
     "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "2f3ca577a72cf5724598f1cff6684fb5cbdb7213",
-    "/main.e61a17fab3f87e2a731d.js": "465b23339e023ccf1dda42147dca94c557ee9b38",
+    "/index.html": "e7e27d52612a0eafe92a892a83d6703f966f8dcb",
+    "/main.9951ac449b8c9ca829fc.js": "f641315cf81e31f5a5b589e484969293a7c68b0c",
     "/polyfills.e3633a42d1123afc5fc9.js": "5261a4729f780dd900641be94bd321182959641a",
     "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
     "/styles.9d95ade21975986aadcb.css": "11b40e37e1e4a7112cb9a4a498fc7d633b395fce"
