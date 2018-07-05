@@ -14,7 +14,9 @@
         "/runtime.a66f828dca56eeb90e02.js",
         "/styles.9d95ade21975986aadcb.css"
       ],
-      "patterns": []
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons"
+      ]
     },
     {
       "name": "assets",
@@ -36,7 +38,19 @@
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "uni-mainz.de",
+      "patterns": [
+        "https:\\/\\/www\\.uni-mainz\\.de\\/32\\.php",
+        "https:\\/\\/www\\.zdv\\.uni-mainz\\.de\\/feed\\/"
+      ],
+      "strategy": "performance",
+      "maxSize": 300,
+      "maxAge": 86400000,
+      "version": 1
+    }
+  ],
   "hashTable": {
     "/assets/icons/account-search-outline.svg": "1aa53d949e64c1c7dd76f5acd1ada23217a4ea9d",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
