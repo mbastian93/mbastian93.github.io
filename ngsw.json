@@ -1,13 +1,12 @@
 {
   "configVersion": 1,
-  "index": "/index.html",
+  "index": "/Studierendenportal/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/favicon.ico",
         "/index.html",
         "/main.5e1aec0d80600d4e1e7a.js",
         "/polyfills.e3633a42d1123afc5fc9.js",
@@ -64,8 +63,7 @@
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/assets/icons/map-marker.png": "8887c2171d97e9d47bc797bdef0644b704ec26a4",
     "/assets/icons/newspaper.svg": "3d96edeb81389dfac9dd22a0136cb21631e74105",
-    "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "21ea7122b489ddf231df13f6dfc10d54d728ef3c",
+    "/index.html": "de8434a0c6e3a8f631acd1f38dbfd2c329efe40b",
     "/main.5e1aec0d80600d4e1e7a.js": "32f70d4a7080e00bd319c9c1dcdd7e4c1a326f19",
     "/polyfills.e3633a42d1123afc5fc9.js": "5261a4729f780dd900641be94bd321182959641a",
     "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
