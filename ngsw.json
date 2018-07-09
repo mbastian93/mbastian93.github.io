@@ -1,19 +1,22 @@
 {
   "configVersion": 1,
-  "index": "/Studierendenportal/index.html",
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/main.5e1aec0d80600d4e1e7a.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.36ad45824f5b821c2b67.js",
         "/polyfills.e3633a42d1123afc5fc9.js",
         "/runtime.a66f828dca56eeb90e02.js",
-        "/styles.9d95ade21975986aadcb.css"
+        "/styles.d6e8145585bbef11263e.css"
       ],
       "patterns": [
-        "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons"
+        "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Roboto:300,400,500"
       ]
     },
     {
@@ -31,7 +34,8 @@
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
         "/assets/icons/map-marker.png",
-        "/assets/icons/newspaper.svg"
+        "/assets/icons/newspaper.svg",
+        "/assets/img/Header.jpg"
       ],
       "patterns": []
     }
@@ -62,10 +66,13 @@
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/assets/icons/map-marker.png": "8887c2171d97e9d47bc797bdef0644b704ec26a4",
     "/assets/icons/newspaper.svg": "3d96edeb81389dfac9dd22a0136cb21631e74105",
-    "/main.5e1aec0d80600d4e1e7a.js": "32f70d4a7080e00bd319c9c1dcdd7e4c1a326f19",
+    "/assets/img/Header.jpg": "f90c23ba3fbf861e9dfa3d9fd034f1d6bf16a2fe",
+    "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
+    "/index.html": "2be491b555fc5b3c707c9b027988d9af1f77e7c2",
+    "/main.36ad45824f5b821c2b67.js": "409b36ab812174acb21c113663c769a836602f41",
     "/polyfills.e3633a42d1123afc5fc9.js": "5261a4729f780dd900641be94bd321182959641a",
     "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "/styles.9d95ade21975986aadcb.css": "11b40e37e1e4a7112cb9a4a498fc7d633b395fce"
+    "/styles.d6e8145585bbef11263e.css": "001602761fc9a8a2284578126b2f09f416cc89aa"
   },
   "navigationUrls": [
     {
