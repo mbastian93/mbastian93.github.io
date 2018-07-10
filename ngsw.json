@@ -9,10 +9,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.6de52bd7f16453c7db29.js",
+        "/main.3a7675b935ef3c9840a6.js",
         "/polyfills.e3633a42d1123afc5fc9.js",
         "/runtime.a66f828dca56eeb90e02.js",
-        "/styles.d6e8145585bbef11263e.css"
+        "/styles.fbc59184da4ba22338ea.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
@@ -68,11 +68,11 @@
     "/assets/icons/newspaper.svg": "3d96edeb81389dfac9dd22a0136cb21631e74105",
     "/assets/img/Header.jpg": "f90c23ba3fbf861e9dfa3d9fd034f1d6bf16a2fe",
     "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "23e5dacb8974d180592bac3da6dd67a6dcaed4fe",
-    "/main.6de52bd7f16453c7db29.js": "41adfd22163796e6028246e811e02f90548a2dd8",
+    "/index.html": "9faf8b97a86101058213530bf5d601a1bdb3e2f3",
+    "/main.3a7675b935ef3c9840a6.js": "7501ef6541ff3ac0307eb07ab0d21eec502416e9",
     "/polyfills.e3633a42d1123afc5fc9.js": "256822d250817434a0694eba4e2c42309f5acfa9",
     "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "/styles.d6e8145585bbef11263e.css": "001602761fc9a8a2284578126b2f09f416cc89aa"
+    "/styles.fbc59184da4ba22338ea.css": "b0a04dba2a3feea496a4bfc99e1ee1a49fd4a271"
   },
   "navigationUrls": [
     {
