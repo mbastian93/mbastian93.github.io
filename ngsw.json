@@ -9,10 +9,10 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.3a7675b935ef3c9840a6.js",
+        "/main.b26002ca8fda3e25ef64.js",
         "/polyfills.e3633a42d1123afc5fc9.js",
         "/runtime.a66f828dca56eeb90e02.js",
-        "/styles.fbc59184da4ba22338ea.css"
+        "/styles.4f4e99a0b9c7836b38db.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
@@ -24,7 +24,8 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/assets/icons/account-search-outline.svg",
+        "/assets/icons/bus-clock.svg",
+        "/assets/icons/home.svg",
         "/assets/icons/icon-128x128.png",
         "/assets/icons/icon-144x144.png",
         "/assets/icons/icon-152x152.png",
@@ -34,7 +35,10 @@
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
         "/assets/icons/map-marker.png",
+        "/assets/icons/map.svg",
+        "/assets/icons/newspaper-grey.svg",
         "/assets/icons/newspaper.svg",
+        "/assets/icons/search.svg",
         "/assets/img/Header.jpg"
       ],
       "patterns": []
@@ -42,37 +46,52 @@
   ],
   "dataGroups": [
     {
-      "name": "uni-mainz.de",
+      "name": "news",
       "patterns": [
         "https:\\/\\/www\\.uni-mainz\\.de\\/32\\.php",
         "https:\\/\\/www\\.zdv\\.uni-mainz\\.de\\/feed\\/",
-        "https:\\/\\/raeume\\.uni-mainz\\.de\\/aris-api\\/Building"
+        "https:\\/\\/cors-anywhere\\.herokuapp\\.com\\/https:\\/\\/www\\.uni-mainz\\.de\\/32\\.php",
+        "https:\\/\\/cors-anywhere\\.herokuapp\\.com\\/https:\\/\\/www\\.zdv\\.uni-mainz\\.de\\/feed\\/"
       ],
       "strategy": "performance",
       "maxSize": 300,
       "maxAge": 86400000,
       "version": 1
+    },
+    {
+      "name": "building",
+      "patterns": [
+        "https:\\/\\/raeume\\.uni-mainz\\.de\\/aris-api\\/Building"
+      ],
+      "strategy": "performance",
+      "maxSize": 300,
+      "maxAge": 2592000000,
+      "version": 1
     }
   ],
   "hashTable": {
-    "/assets/icons/account-search-outline.svg": "1aa53d949e64c1c7dd76f5acd1ada23217a4ea9d",
-    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/icons/bus-clock.svg": "0117de4937c6217a11c8cd288713638f1be420b6",
+    "/assets/icons/home.svg": "249e5e3c147ab44dc0227fa7c500956da116da51",
+    "/assets/icons/icon-128x128.png": "26d73c548f3b9e4e54eccac4e224708bda67d230",
+    "/assets/icons/icon-144x144.png": "7de0294dfeda57ecc20335386f9567c391176029",
+    "/assets/icons/icon-152x152.png": "98aad7b3c6420058ae7902925152fd4e21313ae4",
+    "/assets/icons/icon-192x192.png": "2748bc0b04e34a4446581c5eef53a84c19c4107a",
+    "/assets/icons/icon-384x384.png": "be33c4128fb3ce6482e604218d442fe8b3b97da3",
+    "/assets/icons/icon-512x512.png": "be33c4128fb3ce6482e604218d442fe8b3b97da3",
+    "/assets/icons/icon-72x72.png": "ed28e41b273c8c59c5411e97be866fc4cca9c5a3",
+    "/assets/icons/icon-96x96.png": "8aa0dbee27e672dab66f65158019c9168e02d10e",
     "/assets/icons/map-marker.png": "8887c2171d97e9d47bc797bdef0644b704ec26a4",
-    "/assets/icons/newspaper.svg": "3d96edeb81389dfac9dd22a0136cb21631e74105",
+    "/assets/icons/map.svg": "591c6a1fe3898353f8b9f7c428d8310d5638580c",
+    "/assets/icons/newspaper-grey.svg": "34392fa5ff2e8b5b5bf72467d02f7d82d7a6ae37",
+    "/assets/icons/newspaper.svg": "70632603f21a28dc236e8ccf4f9a7ba190aa796d",
+    "/assets/icons/search.svg": "1aa53d949e64c1c7dd76f5acd1ada23217a4ea9d",
     "/assets/img/Header.jpg": "f90c23ba3fbf861e9dfa3d9fd034f1d6bf16a2fe",
     "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "9faf8b97a86101058213530bf5d601a1bdb3e2f3",
-    "/main.3a7675b935ef3c9840a6.js": "7501ef6541ff3ac0307eb07ab0d21eec502416e9",
+    "/index.html": "ee7b6fcd6aa8229a085bf57a0d06614a8007b2a7",
+    "/main.b26002ca8fda3e25ef64.js": "9ae859acbe00f2d500f6a3f95be14930c0766d02",
     "/polyfills.e3633a42d1123afc5fc9.js": "256822d250817434a0694eba4e2c42309f5acfa9",
     "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "/styles.fbc59184da4ba22338ea.css": "b0a04dba2a3feea496a4bfc99e1ee1a49fd4a271"
+    "/styles.4f4e99a0b9c7836b38db.css": "24c469c42644112f576d6b2e5eb8e11f25d78512"
   },
   "navigationUrls": [
     {
