@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "mbastian93.github.io/Studierendenportal/",
+  "start_url": "/Studierendenportal/",
   "orientation": "portrait",
   "icons": [
     {
