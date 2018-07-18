@@ -7,15 +7,16 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/0.50d87d7aced00318c7a4.js",
-        "/1.bcc20ffaded47c1650f2.js",
-        "/2.215288796f6d5b3e0d97.js",
+        "/0.9678f8c5a1c76e0f91a8.js",
+        "/1.997b733189894213e89c.js",
+        "/2.b7a1df4eb97169f753d5.js",
+        "/3.8778a0b268e1b5046dfc.js",
         "/favicon.ico",
         "/index.html",
-        "/main.072522a3a9d7c424eab6.js",
-        "/polyfills.8a06376160c554ad8e9f.js",
-        "/runtime.c0783973614a423e3cac.js",
-        "/styles.4f4e99a0b9c7836b38db.css"
+        "/main.000f31f0e96b3e752e8e.js",
+        "/polyfills.f7d297ab9e02beda264c.js",
+        "/runtime.4e31b18466eaa80e787e.js",
+        "/styles.cfb81c9d746965337fdc.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
@@ -27,7 +28,11 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/assets/icons/account.svg",
         "/assets/icons/bus-clock.svg",
+        "/assets/icons/email.svg",
+        "/assets/icons/fax.svg",
+        "/assets/icons/home-map-marker.svg",
         "/assets/icons/home.svg",
         "/assets/icons/icon-128x128.png",
         "/assets/icons/icon-144x144.png",
@@ -40,6 +45,7 @@
         "/assets/icons/map-marker.png",
         "/assets/icons/map.svg",
         "/assets/icons/newspaper.svg",
+        "/assets/icons/phone.svg",
         "/assets/icons/search.svg",
         "/assets/img/Header.jpg"
       ],
@@ -72,10 +78,15 @@
     }
   ],
   "hashTable": {
-    "/0.50d87d7aced00318c7a4.js": "57f30164b386936d634b3f3347c5ef3116ff1413",
-    "/1.bcc20ffaded47c1650f2.js": "46e37588de83d37b8060dfa20d604d8eb178cd33",
-    "/2.215288796f6d5b3e0d97.js": "eac4b2592c89d516e5f87beab1c1828ac37b859d",
+    "/0.9678f8c5a1c76e0f91a8.js": "519ae289ccb47f05fede063b66f382e6fa420804",
+    "/1.997b733189894213e89c.js": "722b81c97f0df6417e662b7594dd6e1889e658ab",
+    "/2.b7a1df4eb97169f753d5.js": "d640b6c74d53c03efffa696f5e40bf0827546dda",
+    "/3.8778a0b268e1b5046dfc.js": "1ebe2aafadb53c2122bdac4cd8dd19ded2b7f14e",
+    "/assets/icons/account.svg": "802adecfe1fd440c8279a11750e8f729684a71f5",
     "/assets/icons/bus-clock.svg": "0117de4937c6217a11c8cd288713638f1be420b6",
+    "/assets/icons/email.svg": "ab52fb3df9a5ccdd6f2aa56722c8bafba6e2a653",
+    "/assets/icons/fax.svg": "ba1e64f4bacd264da7232ab6b560029b3a258b30",
+    "/assets/icons/home-map-marker.svg": "3cede625271228b36939a04a7f9e3950448bb439",
     "/assets/icons/home.svg": "249e5e3c147ab44dc0227fa7c500956da116da51",
     "/assets/icons/icon-128x128.png": "26d73c548f3b9e4e54eccac4e224708bda67d230",
     "/assets/icons/icon-144x144.png": "7de0294dfeda57ecc20335386f9567c391176029",
@@ -88,14 +99,15 @@
     "/assets/icons/map-marker.png": "8887c2171d97e9d47bc797bdef0644b704ec26a4",
     "/assets/icons/map.svg": "591c6a1fe3898353f8b9f7c428d8310d5638580c",
     "/assets/icons/newspaper.svg": "70632603f21a28dc236e8ccf4f9a7ba190aa796d",
+    "/assets/icons/phone.svg": "64ef241b3fd37b8298c6b9aed277b07e3842eed7",
     "/assets/icons/search.svg": "1aa53d949e64c1c7dd76f5acd1ada23217a4ea9d",
     "/assets/img/Header.jpg": "f90c23ba3fbf861e9dfa3d9fd034f1d6bf16a2fe",
     "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "d117c5c8a2fa7bc78239e140fa7d77a3ce55d408",
-    "/main.072522a3a9d7c424eab6.js": "0ed91faf090b214275f91fef1131c8810a7c338c",
-    "/polyfills.8a06376160c554ad8e9f.js": "39897c0921873293ecea8ae9c369cf2557f14cce",
-    "/runtime.c0783973614a423e3cac.js": "93c20356232cd30e3d47ec90bf5e5ab5cdcdf942",
-    "/styles.4f4e99a0b9c7836b38db.css": "24c469c42644112f576d6b2e5eb8e11f25d78512"
+    "/index.html": "7dd753b551a97a6d123d8da0be693e503407d562",
+    "/main.000f31f0e96b3e752e8e.js": "8dbc8d081cd9eafc3ebd2ce24c6bd86012e25786",
+    "/polyfills.f7d297ab9e02beda264c.js": "bcb5b977175c689b7cb78cbc9a32c85bc1e0046e",
+    "/runtime.4e31b18466eaa80e787e.js": "c80b669cc8bed1d930b7cf120e48d9701af2cfcd",
+    "/styles.cfb81c9d746965337fdc.css": "5c742fe6e0bc7f93926eabf58fc2a5d7037e03c4"
   },
   "navigationUrls": [
     {
