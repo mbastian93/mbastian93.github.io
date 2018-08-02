@@ -1,26 +1,27 @@
 {
   "configVersion": 1,
-  "index": "/Studierendenportal/index.html",
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/1.43764f67f9dc7da828fa.js",
-        "/2.7790f9cbfec59c06ca60.js",
-        "/3.68818cd54656729bc138.js",
-        "/4.73e99ad891e1d5ac1ae1.js",
-        "/5.68609a7bfb8a274e15e5.js",
-        "/6.710dd0cdc6d6af9ad121.js",
-        "/7.28b6f12042417fa80dd8.js",
-        "/common.3cfedfb4320e926b2ae2.js",
+        "/1.792c132ed2d309d3d6f1.js",
+        "/2.3ffc4b029043ac789f4c.js",
+        "/3.3a6c7d180405f063fec4.js",
+        "/4.1b3b4fe416d15541b8e2.js",
+        "/5.11613a037104b9c48d71.js",
+        "/6.922f5acda0532eb3cf4b.js",
+        "/7.4667c36506a0fa474097.js",
+        "/8.7727159192d35c012be8.js",
+        "/common.7cb3415a8d090327dc06.js",
         "/favicon.ico",
         "/index.html",
-        "/main.2f40c4a14b94212ae0d8.js",
-        "/polyfills.ac7e5c1948c3e88fa885.js",
-        "/runtime.26df39bc691b1db4d5c9.js",
-        "/styles.84a737f4ae8a9aa4e594.css"
+        "/main.a3bb749a19c7e5b0dd75.js",
+        "/polyfills.ee63c15da1fc0d50acd5.js",
+        "/runtime.fd9afa1cc3e9cea5e9d5.js",
+        "/styles.82121690a1be6e8b74d8.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
@@ -49,6 +50,13 @@
         "/assets/icons/icon-512x512.png",
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
+        "/assets/icons/icons8-barometer-48.png",
+        "/assets/icons/icons8-calendar-48.png",
+        "/assets/icons/icons8-clock-48.png",
+        "/assets/icons/icons8-hygrometer-48.png",
+        "/assets/icons/icons8-thermometer-48.png",
+        "/assets/icons/icons8-wind-gauge-48.png",
+        "/assets/icons/icons8-windsock-48.png",
         "/assets/icons/information-outline.svg",
         "/assets/icons/map-marker.png",
         "/assets/icons/map-marker.svg",
@@ -56,6 +64,7 @@
         "/assets/icons/newspaper.svg",
         "/assets/icons/phone.svg",
         "/assets/icons/search.svg",
+        "/assets/icons/weather-partlycloudy.svg",
         "/assets/img/Header.jpg"
       ],
       "patterns": []
@@ -90,6 +99,7 @@
     {
       "name": "events",
       "patterns": [
+        "https:\\/\\/cors-anywhere\\.herokuapp\\.com\\/https:\\/\\/univis\\.uni-mainz\\.de\\/prg\\?search=events&show=xml",
         "https:\\/\\/univis\\.uni-mainz\\.de\\/prg\\?search=events&show=xml"
       ],
       "strategy": "performance",
@@ -111,13 +121,14 @@
     }
   ],
   "hashTable": {
-    "/1.43764f67f9dc7da828fa.js": "11dda4294c200cf9173c8439e1b669207cc266fd",
-    "/2.7790f9cbfec59c06ca60.js": "bfb9e031f37c49112cb29054b3c86b24e3e3dc9d",
-    "/3.68818cd54656729bc138.js": "49ae40a20b1e7ebcba4e07930392dc58c8e4ce09",
-    "/4.73e99ad891e1d5ac1ae1.js": "94fa5d3947e952d6ad5ae2bbb21ff3d167df4890",
-    "/5.68609a7bfb8a274e15e5.js": "a944e461a2ce9f4a2ceba18c32954189c7860c67",
-    "/6.710dd0cdc6d6af9ad121.js": "74c4626d05a7b47f37ef4e904dd62930758335d4",
-    "/7.28b6f12042417fa80dd8.js": "a19bc7106d72f495bdf8796124b688bde8cc43d5",
+    "/1.792c132ed2d309d3d6f1.js": "e82785ebbbaffcc95bd1b2af3c2b701c9d175585",
+    "/2.3ffc4b029043ac789f4c.js": "7b82d93c204efe1f01b55cf460a98dea1418efb6",
+    "/3.3a6c7d180405f063fec4.js": "870e73600c0da5fd14b73036a701fd7b5c222f76",
+    "/4.1b3b4fe416d15541b8e2.js": "431b4c877171ab807cd81f7c2e0d9d0c2b64956e",
+    "/5.11613a037104b9c48d71.js": "ae8fe6f05e1d6a611d663b6cb3e826e56738d112",
+    "/6.922f5acda0532eb3cf4b.js": "1321cfc027a179dc8717f8809493a90de607022b",
+    "/7.4667c36506a0fa474097.js": "02ebb5d3f6be4a835ba61875911fa4e6a528821e",
+    "/8.7727159192d35c012be8.js": "363cc2d7bdb73dfe43301cd829b4ece53040bf25",
     "/assets/icons/account.svg": "802adecfe1fd440c8279a11750e8f729684a71f5",
     "/assets/icons/bus-clock.svg": "0117de4937c6217a11c8cd288713638f1be420b6",
     "/assets/icons/calendar.svg": "9f8d351746d1a84694f1e519602a11b24378c76d",
@@ -135,6 +146,13 @@
     "/assets/icons/icon-512x512.png": "be33c4128fb3ce6482e604218d442fe8b3b97da3",
     "/assets/icons/icon-72x72.png": "6e8d491ea0ebfda10d32242b14176fc7b661d57c",
     "/assets/icons/icon-96x96.png": "d003e9a6da998b40ba907dabb2de77fdd31c8dac",
+    "/assets/icons/icons8-barometer-48.png": "d42016145340dd5a5f7ed66c2f7ea5f6102674af",
+    "/assets/icons/icons8-calendar-48.png": "d66ef0e520e2a2e09da05b1c8474eade18e40477",
+    "/assets/icons/icons8-clock-48.png": "29d82eeb77d05bc624f06d3274c537bb0374b8f3",
+    "/assets/icons/icons8-hygrometer-48.png": "2e40f2e3fc820db66e05b8d8dc040832b15d6fd7",
+    "/assets/icons/icons8-thermometer-48.png": "e0933a32d4ecc34ad2f1177aea86e63f2ebede13",
+    "/assets/icons/icons8-wind-gauge-48.png": "cab9f7639b75b29f401908814448417c823ff67f",
+    "/assets/icons/icons8-windsock-48.png": "46ec0ca73f94b310f996aa8dbaf561dc441d6989",
     "/assets/icons/information-outline.svg": "e8a0fcdf311e7a71240f96cbfdd6b3e59fff5737",
     "/assets/icons/map-marker.png": "8887c2171d97e9d47bc797bdef0644b704ec26a4",
     "/assets/icons/map-marker.svg": "dc19c89dad4030210f1a702d262f06ec59aebd77",
@@ -142,14 +160,15 @@
     "/assets/icons/newspaper.svg": "70632603f21a28dc236e8ccf4f9a7ba190aa796d",
     "/assets/icons/phone.svg": "64ef241b3fd37b8298c6b9aed277b07e3842eed7",
     "/assets/icons/search.svg": "1aa53d949e64c1c7dd76f5acd1ada23217a4ea9d",
+    "/assets/icons/weather-partlycloudy.svg": "1e8bc378f1a88a76112e119ae602abffb60b8a8c",
     "/assets/img/Header.jpg": "33f0d1e86f382e7d2a207930180d48d4c89150b3",
-    "/common.3cfedfb4320e926b2ae2.js": "65d7f04f091eda8337b710eb9c27023693f682f6",
+    "/common.7cb3415a8d090327dc06.js": "75493f1046bcc8a4cb403e368bf62a6544e536f3",
     "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "5fa9b3de79e38f818d525f11e41406ff5532afdb",
-    "/main.2f40c4a14b94212ae0d8.js": "5edb99e36ec5a6f6bff7c3ef1fe98cb3b4ee3af6",
-    "/polyfills.ac7e5c1948c3e88fa885.js": "a1bdc47f20cf459c469e7dd1c91de09b16ce0dc6",
-    "/runtime.26df39bc691b1db4d5c9.js": "7bb7d3b3edf8018b384a5b66980c7c0dd8524f3b",
-    "/styles.84a737f4ae8a9aa4e594.css": "562449061a847504a84a60cefd35967cc9a9312e"
+    "/index.html": "6cf6cf935ebde26aa1afc56438375ef501478356",
+    "/main.a3bb749a19c7e5b0dd75.js": "a933c6801ab6d2d6f65275b5a1ceed3333292225",
+    "/polyfills.ee63c15da1fc0d50acd5.js": "4396d8ef604b54dc7ffeedd6430cccc7d5285457",
+    "/runtime.fd9afa1cc3e9cea5e9d5.js": "bfb000ef50f6f8c4aa0ef880736d00c38a3fc6fc",
+    "/styles.82121690a1be6e8b74d8.css": "349a535e4f25a567004de5f1aa9306a53784304a"
   },
   "navigationUrls": [
     {
