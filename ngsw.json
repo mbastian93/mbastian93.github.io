@@ -1,28 +1,30 @@
 {
   "configVersion": 1,
-  "index": "/Studierendenportal/index.html",
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/1.43764f67f9dc7da828fa.js",
-        "/2.caeb075d10b419228550.js",
-        "/3.4619b681e0b0e7acd70e.js",
-        "/4.98133699f0fb26a9aada.js",
-        "/5.7bf5e7717ba89b4df5db.js",
-        "/6.f9ff0a07c657942f1f8d.js",
-        "/7.d4f358df58de7d6a4d9d.js",
-        "/8.20d6c11867d954ac5f56.js",
-        "/9.26ff40114699099d5153.js",
-        "/common.3cfedfb4320e926b2ae2.js",
+        "/1.f972b5f139592c31be9b.js",
+        "/10.c985376ad268c831d564.js",
+        "/11.b5d58519e76ecd254324.js",
+        "/2.0925b58f22b5932642ac.js",
+        "/3.5ed3f410a871486f7bd2.js",
+        "/4.f7612fc18d9d4cdac5fd.js",
+        "/5.372733b1919109613111.js",
+        "/6.be1c2b155d35d6129edd.js",
+        "/7.e54adf93870b2be6c7a5.js",
+        "/8.e192c4ce58f0945c1f30.js",
+        "/9.008171e93b2db3cd5e8f.js",
+        "/common.1242a80c890a468025be.js",
         "/favicon.ico",
         "/index.html",
-        "/main.cfca6dfe21ab71f8a4e5.js",
-        "/polyfills.c2f711343826faa26406.js",
-        "/runtime.45ee79d284f987b44306.js",
-        "/styles.82121690a1be6e8b74d8.css"
+        "/main.2c94b24fcfaa5dedc864.js",
+        "/polyfills.0eb2a35b259c5778e521.js",
+        "/runtime.858d5ee397c5d4bee538.js",
+        "/styles.97959ffc375a4709222f.css"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/icon\\?family=Material\\+Icons",
@@ -34,10 +36,14 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/assets/icons/account-card-details.svg",
         "/assets/icons/account.svg",
         "/assets/icons/bus-clock.svg",
         "/assets/icons/calendar.svg",
+        "/assets/icons/check-circle.svg",
         "/assets/icons/clock-outline.svg",
+        "/assets/icons/close-circle.svg",
+        "/assets/icons/desktop-classic.svg",
         "/assets/icons/email.svg",
         "/assets/icons/fax.svg",
         "/assets/icons/food-fork-drink.svg",
@@ -66,7 +72,8 @@
         "/assets/icons/phone.svg",
         "/assets/icons/search.svg",
         "/assets/icons/weather-partlycloudy.svg",
-        "/assets/img/Header.jpg"
+        "/assets/img/Header.jpg",
+        "/assets/img/LogoUB.jpg"
       ],
       "patterns": []
     }
@@ -80,8 +87,8 @@
         "https:\\/\\/cors-anywhere\\.herokuapp\\.com\\/https:\\/\\/www\\.uni-mainz\\.de\\/32\\.php",
         "https:\\/\\/cors-anywhere\\.herokuapp\\.com\\/https:\\/\\/www\\.zdv\\.uni-mainz\\.de\\/feed\\/"
       ],
-      "strategy": "performance",
-      "maxSize": 300,
+      "strategy": "freshness",
+      "maxSize": 2,
       "maxAge": 86400000,
       "timeoutMs": 30000,
       "version": 1
@@ -92,7 +99,7 @@
         "https:\\/\\/raeume\\.uni-mainz\\.de\\/aris-api\\/Building"
       ],
       "strategy": "performance",
-      "maxSize": 300,
+      "maxSize": 1,
       "maxAge": 2592000000,
       "timeoutMs": 30000,
       "version": 1
@@ -104,7 +111,7 @@
         "https:\\/\\/univis\\.uni-mainz\\.de\\/prg\\?search=events&show=xml"
       ],
       "strategy": "performance",
-      "maxSize": 300,
+      "maxSize": 10,
       "maxAge": 2592000000,
       "timeoutMs": 30000,
       "version": 1
@@ -127,26 +134,43 @@
         "https:\\/\\/univis\\.uni-mainz\\.de\\/prg\\?search=departments&show=xml"
       ],
       "strategy": "performance",
-      "maxSize": 300,
+      "maxSize": 3,
       "maxAge": 2592000000,
+      "timeoutMs": 30000,
+      "version": 1
+    },
+    {
+      "name": "pcPools",
+      "patterns": [
+        "https:\\/\\/cors-anywhere\\.herokuapp\\.com\\/https:\\/\\/pool-use\\.webapi\\.jgu\\.net\\/"
+      ],
+      "strategy": "performance",
+      "maxSize": 10,
+      "maxAge": 86400000,
       "timeoutMs": 30000,
       "version": 1
     }
   ],
   "hashTable": {
-    "/1.43764f67f9dc7da828fa.js": "11dda4294c200cf9173c8439e1b669207cc266fd",
-    "/2.caeb075d10b419228550.js": "35e54db09b08c35e88d3146179625cfe77d001b6",
-    "/3.4619b681e0b0e7acd70e.js": "de3c5ca8e7499fb899dc422ac0b05bf3568d7ed2",
-    "/4.98133699f0fb26a9aada.js": "af7729db43f22ca7bd8915221b6dd87e62439b3e",
-    "/5.7bf5e7717ba89b4df5db.js": "d6766fb3f174b08502689dcaabc6ebb0045fdf86",
-    "/6.f9ff0a07c657942f1f8d.js": "a98b3cb56decb4124c54010dc7832c508ae0dcc5",
-    "/7.d4f358df58de7d6a4d9d.js": "0078bfea77ba4cda94ba7f6c37f61f7740dffd53",
-    "/8.20d6c11867d954ac5f56.js": "c0dd4734c5ca48d066284895418a8985570d19dd",
-    "/9.26ff40114699099d5153.js": "34596f472ee2c7abc8f2a9da7fab388e19a03dce",
+    "/1.f972b5f139592c31be9b.js": "c71d3819059437c9caef7c421d6a13761c59d110",
+    "/10.c985376ad268c831d564.js": "0566de57489e6b0b2024b2a7d38c016be1efb755",
+    "/11.b5d58519e76ecd254324.js": "3188ed0fbc567ac9f4de88f689826e0f5c64390c",
+    "/2.0925b58f22b5932642ac.js": "29dda0ee449523b134681c4c48540af3d7c3d8e1",
+    "/3.5ed3f410a871486f7bd2.js": "c49d24bf0e4520aaf65b2a6d16a541be21a2869e",
+    "/4.f7612fc18d9d4cdac5fd.js": "1e23c78ed4f0d5a9ae26091f5db23db26fa64208",
+    "/5.372733b1919109613111.js": "ec2a8c4c5e2a9ffde85010f7b7ac3be899241c01",
+    "/6.be1c2b155d35d6129edd.js": "3c560f437eb964904723fa7923875a3f87081409",
+    "/7.e54adf93870b2be6c7a5.js": "9de8ae64a34340c7853f3923223653d306aeffb7",
+    "/8.e192c4ce58f0945c1f30.js": "58e0378822f679b1f08bd2ecf59477f06c63d23a",
+    "/9.008171e93b2db3cd5e8f.js": "eb0a233e2f7bc7e72be56024c64aa1436b194ac4",
+    "/assets/icons/account-card-details.svg": "bf04f65abd3d3156351b1ef6a6b7bbda370f8050",
     "/assets/icons/account.svg": "802adecfe1fd440c8279a11750e8f729684a71f5",
     "/assets/icons/bus-clock.svg": "0117de4937c6217a11c8cd288713638f1be420b6",
     "/assets/icons/calendar.svg": "9f8d351746d1a84694f1e519602a11b24378c76d",
+    "/assets/icons/check-circle.svg": "0ec518777162c826adf3eecdeaad3088fd074a09",
     "/assets/icons/clock-outline.svg": "cf44e2256072014f79febe9ef393ff90af462589",
+    "/assets/icons/close-circle.svg": "f5520a8f295b2eae49e883dcd3a9d90c8f2846e1",
+    "/assets/icons/desktop-classic.svg": "bde9dd63ee58e4de41aeced9c687bc1cd9b14881",
     "/assets/icons/email.svg": "ab52fb3df9a5ccdd6f2aa56722c8bafba6e2a653",
     "/assets/icons/fax.svg": "ba1e64f4bacd264da7232ab6b560029b3a258b30",
     "/assets/icons/food-fork-drink.svg": "5389c2cb83d253c2271212773a141d46a869480d",
@@ -176,13 +200,14 @@
     "/assets/icons/search.svg": "1aa53d949e64c1c7dd76f5acd1ada23217a4ea9d",
     "/assets/icons/weather-partlycloudy.svg": "1e8bc378f1a88a76112e119ae602abffb60b8a8c",
     "/assets/img/Header.jpg": "33f0d1e86f382e7d2a207930180d48d4c89150b3",
-    "/common.3cfedfb4320e926b2ae2.js": "65d7f04f091eda8337b710eb9c27023693f682f6",
+    "/assets/img/LogoUB.jpg": "4b88fbe468e48c99aeb270f3bd4206844f326299",
+    "/common.1242a80c890a468025be.js": "e33fd3076f6269fc42cf92999df7a316b872a4ef",
     "/favicon.ico": "ce6720c2948bc1f64b36d4a547666a2628d51366",
-    "/index.html": "a8b007a5913c0c1048ec61ef2bbcc626abc67912",
-    "/main.cfca6dfe21ab71f8a4e5.js": "41befb05b1efc40a3a2b913f7ef3ffbf059f75cc",
-    "/polyfills.c2f711343826faa26406.js": "8b43e6000b4f253d54f72cb4b104b6d7660bc38d",
-    "/runtime.45ee79d284f987b44306.js": "bc80b1c1b3a3b4d3834a23b3bc24164d01259c25",
-    "/styles.82121690a1be6e8b74d8.css": "349a535e4f25a567004de5f1aa9306a53784304a"
+    "/index.html": "1af00554c5d29a91fdab9a056394088eb095a454",
+    "/main.2c94b24fcfaa5dedc864.js": "f127e79bed4fc0e61f0f2bb514cbb8571daacd40",
+    "/polyfills.0eb2a35b259c5778e521.js": "026fbfc4bce48cd7bd121b7b48ba30ec7fccbfe1",
+    "/runtime.858d5ee397c5d4bee538.js": "bbfa86e56970d454d96477dda60fff881f5d0156",
+    "/styles.97959ffc375a4709222f.css": "9248fdb2508c0606b859e6d48f6d3aa155a1bf09"
   },
   "navigationUrls": [
     {
